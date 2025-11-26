@@ -1,19 +1,19 @@
 import type { ProfileConfig } from "../types/config";
 
 export const profileConfig: ProfileConfig = {
-  avatar: "/assets/images/avatar.webp",
-  name: "Firefly",
-  bio: "Hello, I'm Firefly.",
+  avatar: "https://pic1.imgdb.cn/item/691329663203f7be00f47295.jpg",
+  name: "JaxBytes",
+  bio: "Hello, I'm JaxBytes.",
   links: [
     {
-      name: "Bilibli",
-      icon: "fa6-brands:bilibili",
-      url: "https://space.bilibili.com/38932988",
+      name: "Email",
+      icon: "fa6-solid:envelope",
+      url: "mailto:i@doc.hk",
     },
     {
       name: "GitHub",
       icon: "fa6-brands:github",
-      url: "https://github.com/CuteLeaf",
+      url: "https://github.com/JaxBytes",
     },
   ],
 };

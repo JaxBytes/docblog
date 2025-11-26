@@ -6,16 +6,23 @@ import { fontConfig } from "./fontConfig";
 const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
-  title: "Firefly",
-  subtitle: "Demo site",
+  title: "JaxBytes's blog",
+  subtitle: "用代码和文字，拆解世界的复杂度。",
   site_url: "https://firefly.cuteleaf.cn",
   description:
-    "Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。",
+    "用代码把问题切成可运行的片段，用文字把思考拼成可回味的图景。在这里，复杂被一点点拆开，留下清晰与惊喜。",
   keywords: [
     "Firefly",
     "Fuwari",
     "Astro",
-    "ACGN",
+    "学习笔记",
+    "灵感碎片",
+    "生活留白",
+    "开发日志",
+    "踩坑记录",
+    "代码日常",
+    "技术随想",
+    "blog",
     "博客",
     "技术博客",
     "静态博客",
@@ -24,15 +31,15 @@ export const siteConfig: SiteConfig = {
   lang: SITE_LANG,
 
   themeColor: {
-    hue: 165, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-    fixed: false, // 对访问者隐藏主题色选择器
+    hue: 200, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
+    fixed: true, // 对访问者隐藏主题色选择器
     defaultMode: "system", // 默认模式："light" 亮色，"dark" 暗色，"system" 跟随系统
   },
 
   favicon: [
     // 留空以使用默认 favicon
     {
-      src: "/assets/images/favicon.ico", // 图标文件路径
+      src: "/assets/images/heart.svg", // 图标文件路径
       theme: "light", // 可选，指定主题 'light' | 'dark'
       sizes: "32x32", // 可选，图标大小
     },
@@ -45,13 +52,13 @@ export const siteConfig: SiteConfig = {
   // { type: "image", value: "https://example.com/logo.png", alt: "Firefly Logo" }
   navbarLogo: {
     type: "image",
-    value: "/assets/images/LiuYingPure3.svg",
+    value: "/assets/images/heart.svg",
     alt: "🍀",
   },
-  navbarTitle: "Firefly", // 导航栏标题，可以设置为与 title 不同的值，如果不设置则使用 title
+  navbarTitle: "JaxBytes", // 导航栏标题，可以设置为与 title 不同的值，如果不设置则使用 title
 
   // 站点开始日期，用于统计运行天数
-  siteStartDate: "2025-01-01", // 请修改为你的站点实际开始日期，格式：YYYY-MM-DD
+  siteStartDate: "2025-11-26", // 请修改为你的站点实际开始日期，格式：YYYY-MM-DD
 
   // bangumi配置
   bangumi: {
@@ -68,8 +75,8 @@ export const siteConfig: SiteConfig = {
   // bangumi的数据为编译时获取的，所以不是实时数据，请配置bangumi.userId
   pages: {
     sponsor: true, // 赞助页面开关
-    guestbook: true, // 留言板页面开关，需要配置评论系统
-    bangumi: true, // 番组计划页面开关，含追番和游戏，dev调试时只获取一页数据，build才会获取全部数据
+    guestbook: false, // 留言板页面开关，需要配置评论系统
+    bangumi: false, // 番组计划页面开关，含追番和游戏，dev调试时只获取一页数据，build才会获取全部数据
   },
 
   // 文章列表布局配置
@@ -78,7 +85,7 @@ export const siteConfig: SiteConfig = {
     // 如果sidebarConfig.ts中侧边栏配置启用了"both"双侧边栏，则无法使用文章列表"grid"网格（双列）布局
     defaultMode: "list",
     // 是否允许用户切换布局
-    allowSwitch: true,
+    allowSwitch: false,
   },
 
   // 分页配置
@@ -89,9 +96,9 @@ export const siteConfig: SiteConfig = {
 
   backgroundWallpaper: {
     // 壁纸模式："banner" 横幅壁纸，"overlay" 全屏壁纸，"none" 纯色背景无壁纸
-    mode: "banner",
+    mode: "none",
     // 是否允许用户通过导航栏切换壁纸模式，设为false可提升性能（只渲染当前模式）
-    switchable: true,
+    switchable: false,
 
     // 背景图片配置
     src: {
